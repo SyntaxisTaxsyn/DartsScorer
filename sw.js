@@ -1,11 +1,11 @@
-var GHPATH = '/WatermarkGenerate';
-var APP_PREFIX = 'WatermarkGenerate_';
-var VERSION = 'version_004';
+var GHPATH = '/DartsScorer';
+var APP_PREFIX = 'DartsScorer_';
+var VERSION = 'version_001';
 var URLS = [    
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
   `${GHPATH}/css/styles.css`,
-  `${GHPATH}/Img/AppIcon.png`
+  `${GHPATH}/Img/DartsScorer.png`
 ]
 
 var CACHE_NAME = APP_PREFIX + VERSION
