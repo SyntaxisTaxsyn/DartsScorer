@@ -1,17 +1,17 @@
 {
-  "name": "Watermark Generator",
-  "short_name": "Watermark Gen",
-  "description": "Watermark Generator PWA",
-  "scope": "/WatermarkGenerate/",
-  "start_url": "/WatermarkGenerate/",
+  "name": "DartsScorer",
+  "short_name": "DartsScorer",
+  "description": "DartsScorerPWA",
+  "scope": "/DartsScorer/",
+  "start_url": "/DartsScorer/",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "display": "standalone", 
   "icons": [
       {
-        "src": "/WatermarkGenerate/Img/AppIcon.png",
+        "src": "/DartsScorer/Img/DartsScorer.png",
         "type": "image/png",
-        "sizes": "1165x1319"
+        "sizes": "256x256"
       }
   ]
 }
