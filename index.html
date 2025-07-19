@@ -322,16 +322,19 @@ let currentPlayer = 0;
   updatePlayerTable();
 }
 
-  // Check orientation
   function checkOrientation() {
-    if (window.innerWidth > window.innerHeight) {
-      rotateWarning.style.display = 'none';
-      document.getElementById('app').style.display = 'block';
-    } else {
-      rotateWarning.style.display = 'flex';
-      document.getElementById('app').style.display = 'none';
-    }
+  const isLandscape =
+    (window.screen.orientation && window.screen.orientation.type.startsWith('landscape')) ||
+    window.innerWidth > window.innerHeight;
+
+  if (isLandscape) {
+    rotateWarning.style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+  } else {
+    rotateWarning.style.display = 'flex';
+    document.getElementById('app').style.display = 'none';
   }
+}
   
   function updateDartHistory() {
   const tbody = document.querySelector("#dart-history tbody");
@@ -416,8 +419,13 @@ function updatePlayerTable() {
   });
 }
 
-  window.addEventListener('resize', checkOrientation);
-  window.addEventListener('load', checkOrientation);
+  window.addEventListener('resize', () => setTimeout(checkOrientation, 100));
+  window.addEventListener('orientationchange', () => setTimeout(checkOrientation, 100));
+window.addEventListener('load', () => {
+  checkOrientation();
+  updatePlayerTable();
+  updateDisplay();
+});
 </script>
 
 </body>
