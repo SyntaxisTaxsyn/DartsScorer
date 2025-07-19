@@ -418,9 +418,9 @@ function updatePlayerTable() {
     tbody.appendChild(row);
   });
 }
-
-  window.addEventListener('resize', () => setTimeout(checkOrientation, 100));
-  window.addEventListener('orientationchange', () => setTimeout(checkOrientation, 100));
+  let checkTimeout = 1000;
+  window.addEventListener('resize', () => setTimeout(checkOrientation, checkTimeout));
+  window.addEventListener('orientationchange', () => setTimeout(checkOrientation, checkTimeout));
 window.addEventListener('load', () => {
   checkOrientation();
   updatePlayerTable();
